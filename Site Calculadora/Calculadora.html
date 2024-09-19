@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples</title>
+    <link rel="stylesheet" href="stylles.css">
+</head>
+<body>
+    <div class="number-box" id="first-number-box">
+        <h2>Digite o primeiro número</h2>
+        <input type="number" id="num1" placeholder="Número 1">
+    </div>
+
+    <div class="operation-box">
+        <h2>Escolha a operação</h2>
+        <div class="operation-select">
+            <span id="selected-operation">Somar</span>
+            <button onclick="toggleOperation()">&#x25BC;</button>
+        </div>
+        <ul id="operation-list" class="hidden">
+            <li onclick="setOperation('+')">Somar</li>
+            <li onclick="setOperation('-')">Subtrair</li>
+            <li onclick="setOperation('*')">Multiplicar</li>
+            <li onclick="setOperation('/')">Dividir</li>
+        </ul>
+    </div>
+
+    <div class="number-box" id="second-number-box">
+        <h2>Digite o segundo número</h2>
+        <input type="number" id="num2" placeholder="Número 2">
+    </div>
+    </div>
+
+    <div class="confirm-box">
+        <button onclick="calculate()">Confirmar</button>
+        <h2 id="result">Resultado: </h2>
+    </div>
+
+    <script src="funcao.js"></script>
+</body>
+</html>
